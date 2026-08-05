@@ -35,7 +35,7 @@ from gi.repository import GObject, Nemo
 from nemoRepoCore import (coreConfig, findRepoRoot, localDirectoryPath,
                           repoCache, requireCore)
 
-requireCore("1.0.0")
+requireCore("0.1.0")
 
 branchAttribute = "repo_branch"
 statusAttribute = "repo_status"
