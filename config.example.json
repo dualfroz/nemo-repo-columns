@@ -1,0 +1,7 @@
+{
+  "cache_ttl_seconds": 5,
+  "columns": {
+    "branch": true,
+    "status": true
+  }
+}
