@@ -1,13 +1,4 @@
 #!/usr/bin/python3
-"""nemo-repo-columns: "Git Branch" and "Git Status" columns for Nemo.
-
-Enable them per folder through Nemo's own "Visible Columns" dialog, or
-globally under Edit > Preferences > List View. Values are filled in for
-repository roots and left blank everywhere else.
-
-Requires nemo-repo-core: https://github.com/dualfroz/nemo-repo-core
-"""
-
 import importlib.util
 import os
 import sys
@@ -54,11 +45,6 @@ class RepoColumnProvider(GObject.GObject, Nemo.ColumnProvider,
                          Nemo.InfoProvider, Nemo.NameAndDescProvider):
 
     def get_columns(self):
-        """Columns are read once, when Nemo loads the extension.
-
-        Turning one off in the config therefore needs a Nemo restart, unlike
-        every other setting in this family.
-        """
         columns = []
         if coreConfig.sectionFlag("columns", "branch", True):
             columns.append(Nemo.Column(name="NemoRepoColumns::branch",
